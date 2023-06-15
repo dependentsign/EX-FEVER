@@ -47,7 +47,7 @@ And a multi-hop design retrieval model [Multi-Hop Dense Text Retrieval (`MDR`)](
 
 ## 2. Explanatory stage
 
-We fine tune a bart model through [transformer library][https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-generation]
+We fine tune a bart model through [transformer library](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-generation)
 
 ## 3. Verdict prediction
 
