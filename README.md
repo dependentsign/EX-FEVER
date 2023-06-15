@@ -72,7 +72,7 @@ You can choose the prompt temples from 'w_exp', 'claim_only', 'wo_exp', 'w_exp_d
 The test results are saved to the results fold.
 
 ## 5. Data characteristic
-<img src="/Users/huan/Desktop/Todo/EX-FEVER/data/length.png" alt="length" style="zoom:10%;" /><img src="/Users/huan/Desktop/Todo/EX-FEVER/data/hopps.png" alt="hopps" style="zoom:10%;" />
+<img src="data/length.png" alt="length" style="zoom:10%;" /><img src="data/hopps.png" alt="hopps" style="zoom:10%;" />
 
 
 
