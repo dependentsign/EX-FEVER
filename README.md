@@ -76,9 +76,22 @@ The test results are saved to the results fold.
 
 
 
+## Citation
+If you use this dataset, please cite the following paper:
 
-
-
-
-
-
+```bibtex
+@article{ma2023exfever,
+  author       = {Huanhuan Ma and
+                  Weizhi Xu and
+                  Yifan Wei and
+                  Liuji Chen and
+                  Liang Wang and
+                  Qiang Liu and
+                  Shu Wu and
+                  Liang Wang},
+  title        = {{EX-FEVER:} {A} Dataset for Multi-hop Explainable Fact Verification},
+  journal      = {CoRR},
+  volume       = {abs/2310.09754},
+  year         = {2023}
+}
+```
