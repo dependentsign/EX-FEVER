@@ -3,6 +3,12 @@ A Dataset for Multi-hop Explainable Fact Verification
 
 ![image-20230613210228175](data/example.png)
 
+A sample in the proposed dataset EX-FEVER. The textual explanation in different colors refers to the information in different documents.
+
+![baseline](data/baseline.png)
+
+The baseline system comprises three stages: document retrieval, summary generation as explanations, and verdict prediction. The system produces two main outputs: a veracity label indicating whether the claim is 'SUPPORT'ed, 'REFUTE'd, or there is 'NOT ENOUGH INFO', and a summary that serves as an explanation for the prediction.
+
 ## 0. Preparation 
 
 First, install [drqa](https://github.com/facebookresearch/DrQA/tree/main#installing-drqa)
