@@ -22,6 +22,8 @@ cd DrQA; pip install -r requirements.txt; python setup.py develop
 pip install -r requirements
 ```
 
+Download wikipedia dumps provided by [HOVER](https://github.com/hover-nlp/hover) https://nlp.cs.unc.edu/data/hover/wiki_wo_links.db 
+
 ## 1. Document Retrieval
 
 We first use [TF-IDF retrieval](https://github.com/facebookresearch/DrQA/tree/main/scripts/retriever) to yield the top-200 relevant Wikipedia documents.
@@ -120,6 +122,33 @@ We use LLMs as a planner through [ProgramFC](https://github.com/teacherpeterpan/
 
 ## Citation
 If you use this dataset, please cite the following paper:
+
+
+```bibtex
+@inproceedings{ma-etal-2024-ex,
+    title = "{EX}-{FEVER}: A Dataset for Multi-hop Explainable Fact Verification",
+    author = "Ma, Huanhuan  and
+      Xu, Weizhi  and
+      Wei, Yifan  and
+      Chen, Liuji  and
+      Wang, Liang  and
+      Liu, Qiang  and
+      Wu, Shu  and
+      Wang, Liang",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-acl.556/",
+    doi = "10.18653/v1/2024.findings-acl.556",
+    pages = "9340--9353",
+    abstract = "Fact verification aims to automatically probe the veracity of a claim based on several pieces of evidence. Existing works are always engaging in accuracy improvement, let alone explainability, a critical capability of fact verification systems.Constructing an explainable fact verification system in a complex multi-hop scenario is consistently impeded by the absence of a relevant, high-quality dataset. Previous datasets either suffer from excessive simplification or fail to incorporate essential considerations for explainability. To address this, we present EX-FEVER, a pioneering dataset for multi-hop explainable fact verification. With over 60,000 claims involving 2-hop and 3-hop reasoning, each is created by summarizing and modifying information from hyperlinked Wikipedia documents. Each instance is accompanied by a veracity label and an explanation that outlines the reasoning path supporting the veracity classification. Additionally, we demonstrate a novel baseline system on our EX-FEVER dataset, showcasing document retrieval, explanation generation, and claim verification, and validate the significance of our dataset. Furthermore, we highlight the potential of utilizing Large Language Models in the fact verification task. We hope our dataset could make a significant contribution by providing ample opportunities to explore the integration of natural language explanations in the domain of fact verification."
+}
+```
 
 ```bibtex
 @article{ma2023exfever,
