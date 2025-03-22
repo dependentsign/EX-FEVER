@@ -47,7 +47,7 @@ def main():
     )
 
     args = parser.parse_args()
-    wiki_db = connect_to_db("data/wiki_db.db")
+    wiki_db = connect_to_db("data/wiki_wo_links.db")
 
     args.data_dir = os.path.join(args.data_dir)
 

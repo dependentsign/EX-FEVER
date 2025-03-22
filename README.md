@@ -24,23 +24,25 @@ pip install -r requirements
 
 Download wikipedia dumps provided by [HOVER](https://github.com/hover-nlp/hover) https://nlp.cs.unc.edu/data/hover/wiki_wo_links.db 
 
+unzip data/data_base.zip
+
 ## 1. Document Retrieval
 
 We first use [TF-IDF retrieval](https://github.com/facebookresearch/DrQA/tree/main/scripts/retriever) to yield the top-200 relevant Wikipedia documents.
 
-```python
+```shell
 python scripts/build_tfidf.py data/wiki_wo_links.db results
 ```
 
-```python
-python scripts/exfc_tfidf.py results/wiki_db-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz results
+```shell
+python scripts/exfc_tfidf.py results/wiki_wo_links-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz results
 ```
 
 Add tfidf rank and score to train/dev/test and save it to an additional csv file
 
 Then the neural-based Document Retrieval Model. Implement by [HOVER](https://github.com/hover-nlp/hover)
 
-```python
+```shell
 python scripts/prepare_data_for_fcdoc_retrieval.py --data_split=dev --doc_retrieve_range=200
 python scripts/prepare_data_for_doc_retrieval.py --data_split=train --doc_retrieve_range=200
 ```

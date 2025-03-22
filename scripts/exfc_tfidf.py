@@ -15,7 +15,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     tfrk = retriever.TfidfDocRanker(tfidf_path=args.tfidf_path)
 
-    tfidf_path = 'results/wiki_db-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz'
+    tfidf_path = 'results/wiki_wo_links-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz'
     tfrk = retriever.TfidfDocRanker(tfidf_path=tfidf_path)
     file_url1 = 'data/data_base.jsonl'
     datares = []
@@ -34,11 +34,11 @@ if __name__ == '__main__':
     data_df = pd.DataFrame(datares)
     data_df = data_df.drop_duplicates(subset='claim')
     data_df = data_df.drop('golden entity', axis=1)
-    test = pd.read_csv('/data/mahuanhuan/projects/EX-FEVER/data/test.csv')
+    test = pd.read_csv('data/test.csv')
     mergedtest_df = pd.merge(test, data_df.drop_duplicates(subset='claim'), on='claim', how='left')
-    dev = pd.read_csv('/data/mahuanhuan/projects/EX-FEVER/data/dev.csv')
+    dev = pd.read_csv('data/dev.csv')
     mergeddev_df = pd.merge(dev, data_df.drop_duplicates(subset='claim'), on='claim', how='left')
-    train = pd.read_csv('/data/mahuanhuan/projects/EX-FEVER/data/train.csv')
+    train = pd.read_csv('data/train.csv')
     mergedtrain_df = pd.merge(train, data_df.drop_duplicates(subset='claim'), on='claim', how='left')
     # add tfidf rank and score to train/dev/test and save it to additonal csv file
     mergedtest_df.to_csv(f'{args.out_dir}/test_tfrank.csv',index=None)

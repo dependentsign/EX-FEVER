@@ -194,6 +194,9 @@ if __name__ == '__main__':
     basename = os.path.splitext(os.path.basename(args.db_path))[0]
     basename += ('-tfidf-ngram=%d-hash=%d-tokenizer=%s' %
                  (args.ngram, args.hash_size, args.tokenizer))
+    
+    if not os.path.exists(args.out_dir):
+        os.mkdir(args.out_dir)
     filename = os.path.join(args.out_dir, basename)
 
     logger.info('Saving to %s.npz' % filename)

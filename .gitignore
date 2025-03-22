@@ -161,3 +161,7 @@ cython_debug/
 results/
 .DS_Store
 .vscode/
+
+*.jsonl
+*.db
+/DrQA
